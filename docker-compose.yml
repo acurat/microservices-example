@@ -30,7 +30,7 @@ services:
     depends_on:
       - zipkin
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
@@ -55,7 +55,7 @@ services:
     depends_on:
       - grafana
     volumes:
-      - ./prometheus/create-datasource-and-dashboard.sh:/create.sh:ro
+      - ./infra/create-datasource-and-dashboard.sh:/create.sh:ro
     command: /create.sh
 
 volumes:

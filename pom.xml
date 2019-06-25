@@ -12,11 +12,11 @@
     </parent>
 
     <groupId>org.acurat</groupId>
-    <artifactId>spring-microservices-parent</artifactId>
+    <artifactId>microservices-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>gateway1</module>
+        <module>gateway</module>
         <module>service1</module>
     </modules>
 

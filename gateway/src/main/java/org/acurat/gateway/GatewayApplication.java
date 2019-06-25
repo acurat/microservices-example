@@ -1,4 +1,4 @@
-package org.acurat.gateway1;
+package org.acurat.gateway;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,10 +12,10 @@ import reactor.core.publisher.Mono;
 
 @Slf4j
 @SpringBootApplication
-public class Gateway1Application {
+public class GatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Gateway1Application.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 
     @Bean

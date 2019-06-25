@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.acurat</groupId>
-        <artifactId>spring-microservices-parent</artifactId>
+        <artifactId>microservices-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>org.acurat</groupId>
-    <artifactId>gateway1</artifactId>
+    <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gateway1</name>
+    <name>gateway</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
