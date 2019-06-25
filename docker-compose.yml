@@ -3,11 +3,24 @@ version: "3"
 services:
 
   # MySQL from openzipkin to bootstrap database for Zipkin
+#  storage:
+#    image: openzipkin/zipkin-mysql
+#    container_name: mysql
+#    ports:
+#      - 3306:3306
   storage:
-    image: openzipkin/zipkin-mysql
+    image: mysql:5.7
     container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'zipkin'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
     ports:
-      - 3306:3306
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
 
   # Zipkin to collect tracing information (UI and Http run here)
   zipkin:
@@ -16,6 +29,8 @@ services:
     environment:
       - STORAGE_TYPE=mysql
       - MYSQL_HOST=mysql
+      - MYSQL_USER=user
+      - MYSQL_PASS=password
     ports:
       - 9411:9411
     depends_on:
@@ -59,4 +74,5 @@ services:
     command: /create.sh
 
 volumes:
-  prometheus_data: {}
+  prometheus_data:
+  mysql_data:
