@@ -1,4 +1,4 @@
-package org.acurat.service1;
+package org.acurat.customer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Service1ApplicationTests {
+public class CustomerApplicationTests {
 
     @Test
     public void contextLoads() {
