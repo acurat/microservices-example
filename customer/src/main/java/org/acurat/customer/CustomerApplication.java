@@ -21,7 +21,8 @@ public class CustomerApplication {
 class BasicController {
 
     @GetMapping("/")
-    public ResponseEntity<String> multiValue() {
+    public ResponseEntity<String> root() {
+        log.info("Creating customer....");
         return ResponseEntity.ok().build();
     }
 }
